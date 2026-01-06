@@ -1,0 +1,155 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "95e58c5a-7056-b211-45b4-fd785e503681",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "LoadData"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Stage",
+        "dependsOn": [
+          {
+            "activity": "Load_Raw",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "91e80f69-a698-aacd-4e7d-c15bebe5d74e",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "LoadData"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Curated_DimCustomer",
+        "dependsOn": [
+          {
+            "activity": "Load_Stage",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "86e579eb-bd3f-87eb-4d75-f89ee6013a2c",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "LoadData"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Curated_DimProduct",
+        "dependsOn": [
+          {
+            "activity": "Load_Stage",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "f464a2d9-f3a5-b141-4bf0-489d8b779eec",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "LoadData"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Raw",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "75241e29-ec57-a40b-4261-10410a20e2d4",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "LoadData"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Curated_FactSales",
+        "dependsOn": [
+          {
+            "activity": "Load_Curated_DimCustomer",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Curated_DimProduct",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Curated_DimDate",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "3784ae4f-07e4-9845-4247-884cf33fe399",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "LoadData"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Curated_DimDate",
+        "dependsOn": [
+          {
+            "activity": "Load_Stage",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

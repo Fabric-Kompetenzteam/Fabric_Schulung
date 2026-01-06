@@ -1,0 +1,82 @@
+table V_Dim_Date
+	lineageTag: ad0769f6-c6e9-4e7a-a04f-26fa79ad64e0
+	sourceLineageTag: [serving].[V_Dim_Date]
+
+	column DateID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6d74449a-6759-495f-b265-f14525c65392
+		sourceLineageTag: DateID
+		summarizeBy: none
+		sourceColumn: DateID
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column FullDate
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 494b340d-33dd-4258-8e66-c9fe70f332c4
+		sourceLineageTag: FullDate
+		summarizeBy: none
+		sourceColumn: FullDate
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Day
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8d814d35-4dea-429f-9764-15fc0a32d942
+		sourceLineageTag: Day
+		summarizeBy: none
+		sourceColumn: Day
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a011b305-f15c-42af-a53d-29fcf459c928
+		sourceLineageTag: Month
+		summarizeBy: none
+		sourceColumn: Month
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3551b93c-1945-4d58-97fc-65a2b73ced13
+		sourceLineageTag: Year
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	partition V_Dim_Date = entity
+		mode: directLake
+		source
+			entityName: V_Dim_Date
+			schemaName: serving
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
