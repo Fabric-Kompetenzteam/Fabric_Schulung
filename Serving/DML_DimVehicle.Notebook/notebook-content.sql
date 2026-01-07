@@ -17,33 +17,14 @@
 -- META         }
 -- META       ]
 -- META     },
--- META     "warehouse": {
--- META       "default_warehouse": "e9e600c8-8fbf-4537-a04d-a01bc2063fb8",
--- META       "known_warehouses": [
--- META         {
--- META           "id": "e9e600c8-8fbf-4537-a04d-a01bc2063fb8",
--- META           "type": "Lakewarehouse"
--- META         }
--- META       ]
--- META     }
+-- META     "warehouse": {}
 -- META   }
 -- META }
 
 -- CELL ********************
 
-create schema serving
-
--- METADATA ********************
-
--- META {
--- META   "language": "sql",
--- META   "language_group": "sqldatawarehouse"
--- META }
-
--- CELL ********************
-
-create view serving.FaktSales as 
-select * from curatedzone.facttaxitrip
+create view serving.DimVehicle as 
+select * from curatedzone.dimvehicle
 
 -- METADATA ********************
 
