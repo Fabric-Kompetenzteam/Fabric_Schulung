@@ -12,7 +12,7 @@
 -- CELL ********************
 
 Create View serving.V_DimVehicle AS
-SELECT * from curated.DimVehicle
+SELECT * from curated.dimvehicle
 
 -- METADATA ********************
 
