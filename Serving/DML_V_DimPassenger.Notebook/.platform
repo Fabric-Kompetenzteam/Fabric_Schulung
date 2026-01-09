@@ -2,11 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Notebook",
-    "displayName": "DML_DimVehicle",
-    "description": "New notebook"
+    "displayName": "DML_V_DimPassenger"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "6ad89fe7-a3ed-8ac3-4b57-7abe461e8334"
+    "logicalId": "22bd31d1-3b03-9714-4b7d-bcb6e9e76dd1"
   }
 }
