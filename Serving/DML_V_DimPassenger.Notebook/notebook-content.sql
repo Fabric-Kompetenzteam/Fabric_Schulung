@@ -12,7 +12,7 @@
 -- CELL ********************
 
 Create View serving.V_DimPassenger AS
-SELECT * from curated.DimPassenger
+SELECT * from curated.dimpassenger
 
 -- METADATA ********************
 
