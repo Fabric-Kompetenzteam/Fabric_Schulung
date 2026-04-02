@@ -1,0 +1,41 @@
+[
+  {
+    "name": "facttaxitrip",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/facttaxitrip",
+        "itemId": "1c006327-fbf8-9abe-4d6f-7915c2202da0",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "DatabricksCatalog"
+      }
+    }
+  },
+  {
+    "name": "dimvehicle",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/dimvehicle",
+        "itemId": "1c006327-fbf8-9abe-4d6f-7915c2202da0",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "DatabricksCatalog"
+      }
+    }
+  },
+  {
+    "name": "dimpassenger",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/dimpassenger",
+        "itemId": "1c006327-fbf8-9abe-4d6f-7915c2202da0",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "DatabricksCatalog"
+      }
+    }
+  }
+]

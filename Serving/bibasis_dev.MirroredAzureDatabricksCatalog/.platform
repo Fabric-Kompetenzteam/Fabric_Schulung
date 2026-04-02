@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MirroredAzureDatabricksCatalog",
+    "displayName": "bibasis_dev",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1c006327-fbf8-9abe-4d6f-7915c2202da0"
+  }
+}
