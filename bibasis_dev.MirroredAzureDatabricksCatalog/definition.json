@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/mirroredAzureDatabricksCatalog/definition/mirroredAzureDatabricksCatalogDefinition/1.0.0/schema.json",
+  "autoSync": "Enabled",
+  "catalogName": "bibasis_dev",
+  "databricksWorkspaceConnectionId": "150a81b8-f28a-4be0-ba44-7df494c9e4b4",
+  "mirrorConfiguration": {
+    "schemas": [
+      {
+        "mirroringMode": "Exclude",
+        "name": "structuredzone"
+      }
+    ]
+  },
+  "mirroringMode": "Full"
+}

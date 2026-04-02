@@ -1,0 +1,54 @@
+[
+  {
+    "name": "facttaxitrip",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/facttaxitrip",
+        "itemId": "a0f85ae6-381a-9ac0-41d7-f0b1ab954849",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "DatabricksCatalog"
+      }
+    }
+  },
+  {
+    "name": "dimvehicle",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/dimvehicle",
+        "itemId": "a0f85ae6-381a-9ac0-41d7-f0b1ab954849",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "DatabricksCatalog"
+      }
+    }
+  },
+  {
+    "name": "dimpassenger",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/dimpassenger",
+        "itemId": "a0f85ae6-381a-9ac0-41d7-f0b1ab954849",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "DatabricksCatalog"
+      }
+    }
+  },
+  {
+    "name": "dimdate",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/dimdate",
+        "itemId": "a0f85ae6-381a-9ac0-41d7-f0b1ab954849",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "DatabricksCatalog"
+      }
+    }
+  }
+]
