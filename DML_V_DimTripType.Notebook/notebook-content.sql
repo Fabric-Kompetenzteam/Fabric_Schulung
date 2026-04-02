@@ -21,8 +21,30 @@
 
 -- CELL ********************
 
-Create View serving.V_DimVehicle AS
-SELECT * from curated.dimvehicle
+select * from curated.dimtriptype
+
+-- METADATA ********************
+
+-- META {
+-- META   "language": "python",
+-- META   "language_group": "synapse_pyspark"
+-- META }
+
+-- CELL ********************
+
+create SCHEMA serving
+
+-- METADATA ********************
+
+-- META {
+-- META   "language": "sql",
+-- META   "language_group": "sqldatawarehouse"
+-- META }
+
+-- CELL ********************
+
+create view serving.V_DimTripType as
+select * from curated.dimtriptype
 
 -- METADATA ********************
 
