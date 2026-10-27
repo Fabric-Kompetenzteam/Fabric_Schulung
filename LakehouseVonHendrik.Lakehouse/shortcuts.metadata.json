@@ -1,0 +1,26 @@
+[
+  {
+    "name": "dimcurrency",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dimcurrency",
+        "itemId": "1af4f6af-931e-4df7-8d05-d090c1ad73b4",
+        "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0"
+      }
+    }
+  },
+  {
+    "name": "dimaccount",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dimaccount",
+        "itemId": "1af4f6af-931e-4df7-8d05-d090c1ad73b4",
+        "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0"
+      }
+    }
+  }
+]
