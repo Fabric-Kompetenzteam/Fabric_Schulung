@@ -1,0 +1,38 @@
+[
+  {
+    "name": "factcallcenter",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/factcallcenter",
+        "itemId": "1af4f6af-931e-4df7-8d05-d090c1ad73b4",
+        "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0"
+      }
+    }
+  },
+  {
+    "name": "dimtriptype",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/core/dimtriptype",
+        "itemId": "bbcf527d-eccb-4dfb-93e4-22816685f3fc",
+        "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0"
+      }
+    }
+  },
+  {
+    "name": "dimdate",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/curatedzone/dimdate",
+        "itemId": "150a8bf3-4942-4ef5-b7b6-aa5977f4fb87",
+        "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0"
+      }
+    }
+  }
+]
