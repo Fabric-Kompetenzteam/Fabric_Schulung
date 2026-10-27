@@ -1,0 +1,138 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_dimtriptype",
+        "type": "Copy",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "FabricSqlDatabaseSource",
+            "queryTimeout": "02:00:00",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "annotations": [],
+              "connectionSettings": {
+                "name": "SQL-SERVER-Schulung",
+                "properties": {
+                  "annotations": [],
+                  "type": "FabricSqlDatabase",
+                  "typeProperties": {
+                    "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0",
+                    "artifactId": "bbcf527d-eccb-4dfb-93e4-22816685f3fc"
+                  },
+                  "externalReferences": {
+                    "connection": "9af53ce4-0bb7-433f-b87a-7e7e9c8273ae"
+                  }
+                }
+              },
+              "type": "FabricSqlDatabaseTable",
+              "schema": [],
+              "typeProperties": {
+                "schema": "core",
+                "table": "dimtriptype"
+              }
+            }
+          },
+          "sink": {
+            "type": "FabricSqlDatabaseSink",
+            "writeBehavior": "insert",
+            "sqlWriterUseTableLock": false,
+            "tableOption": "autoCreate",
+            "datasetSettings": {
+              "annotations": [],
+              "connectionSettings": {
+                "name": "SQL-SERVER-Schulung",
+                "properties": {
+                  "annotations": [],
+                  "type": "FabricSqlDatabase",
+                  "typeProperties": {
+                    "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0",
+                    "artifactId": "bbcf527d-eccb-4dfb-93e4-22816685f3fc"
+                  },
+                  "externalReferences": {
+                    "connection": "9af53ce4-0bb7-433f-b87a-7e7e9c8273ae"
+                  }
+                }
+              },
+              "type": "FabricSqlDatabaseTable",
+              "schema": [],
+              "typeProperties": {
+                "schema": "test",
+                "table": "test"
+              }
+            }
+          },
+          "enableStaging": false,
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "TripTypeSID",
+                  "type": "Int32",
+                  "physicalType": "int"
+                },
+                "sink": {
+                  "name": "TripTypeSID",
+                  "physicalType": "int"
+                }
+              },
+              {
+                "source": {
+                  "name": "TripTypeCode",
+                  "type": "String",
+                  "physicalType": "varchar",
+                  "length": "10"
+                },
+                "sink": {
+                  "name": "TripTypeCode",
+                  "physicalType": "varchar",
+                  "length": "10"
+                }
+              },
+              {
+                "source": {
+                  "name": "TripTypeName",
+                  "type": "String",
+                  "physicalType": "varchar",
+                  "length": "50"
+                },
+                "sink": {
+                  "name": "TripTypeName",
+                  "physicalType": "varchar",
+                  "length": "50"
+                }
+              },
+              {
+                "source": {
+                  "name": "TripTypeDescription",
+                  "type": "String",
+                  "physicalType": "varchar",
+                  "length": "100"
+                },
+                "sink": {
+                  "name": "TripTypeDescription",
+                  "physicalType": "varchar",
+                  "length": "100"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
