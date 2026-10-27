@@ -1,0 +1,14 @@
+[
+  {
+    "name": "dimproduct",
+    "path": "/Tables/curated",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dimproduct",
+        "itemId": "1af4f6af-931e-4df7-8d05-d090c1ad73b4",
+        "workspaceId": "02908afe-b7da-46a7-be64-2de3d911a7b0"
+      }
+    }
+  }
+]
